@@ -1,0 +1,21 @@
+Encryption using Feistel cipher
+Inbox
+Computing/Programming/My Projects
+Patrick Hemsley <patrick.hemsley@gmail.com>
+	
+Fri, 26 Feb, 16:31 (2 days ago)
+	
+to me
+Encrypt :
+L2, R2 = R1, XOR(L1, F(R1, K1)) 
+
+Decrypt:  
+L1, R1 = XOR(R2, F(L2, K1)), L2  
+
+Proof:
+L1, R1  = XOR(R2, F(R1, K1)), R1   since L2 = R1
+             = XOR(XOR(L1, F(R1, K1)), F(R1, K1)), R1   substituting R2
+              = L1, R1                since XOR(XOR(A, B), B) = A
+
+https://en.wikipedia.org/wiki/Feistel_cipher
+
